@@ -28,7 +28,7 @@
     "postcss": "^8.4.0",
     "eslint": "^8.57.0",
     "tailwindcss": "latest",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "^14.0.0",
     "typescript": "latest",
     "@typescript-eslint/parser": "latest",
     "@typescript-eslint/eslint-plugin": "latest"
