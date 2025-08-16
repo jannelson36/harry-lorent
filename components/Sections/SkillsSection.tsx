@@ -65,7 +65,7 @@ const SkillsSection = () => {
   }, {} as Record<string, typeof skills>);
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -73,7 +73,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Core <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Competencies</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full" />
@@ -91,13 +91,13 @@ const SkillsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gray-50 rounded-2xl p-6"
+              className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-10 h-10 bg-gradient-to-r ${getSkillColor(category)} rounded-lg flex items-center justify-center text-white mr-3`}>
                   {getSkillIcon(category)}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 capitalize">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 capitalize">
                   {category} Skills
                 </h3>
               </div>
@@ -109,18 +109,19 @@ const SkillsSection = () => {
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-lg p-4 shadow-sm border border-gray-100"
+                    className="bg-white dark:bg-gray-950 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-800"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-900">{skill.name}</span>
-                      <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                      <span className="font-medium text-gray-900 dark:text-gray-100">{skill.name}</span>
+                      <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                         {skill.level}
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
                       <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: getLevelWidth(skill.level).replace('w-', '') }}
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        style={{ transformOrigin: '0% 50%' }}
                         transition={{ delay: index * 0.1 + 0.2, duration: 0.8 }}
                         className={`h-2 bg-gradient-to-r ${getSkillColor(category)} rounded-full ${getLevelWidth(skill.level)}`}
                       />
@@ -139,7 +140,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           className="mt-16"
         >
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+          <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
             Key <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Achievements</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -169,13 +170,13 @@ const SkillsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center"
+                className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-800 text-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${achievement.color} rounded-full flex items-center justify-center text-white mx-auto mb-4`}>
                   {achievement.icon}
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{achievement.title}</h4>
-                <p className="text-gray-600 text-sm">{achievement.description}</p>
+                <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">{achievement.title}</h4>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">{achievement.description}</p>
               </motion.div>
             ))}
           </div>
