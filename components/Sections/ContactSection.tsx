@@ -18,12 +18,12 @@ const ContactSection = () => {
   ];
 
   const hobbies = [
-    { name: "Traveling", emoji: "🌍", description: "Exploring new cultures and places" },
-    { name: "Swimming", emoji: "🏊‍♂️", description: "Staying active and healthy" },
-    { name: "Psychology Research", emoji: "🧠", description: "Understanding human behavior" },
+    { name: 'Traveling', emoji: '🌍', description: 'Exploring new cultures and places' },
+    { name: 'Swimming', emoji: '🏊‍♂️', description: 'Staying active and healthy' },
+    { name: 'Psychology Research', emoji: '🧠', description: 'Understanding human behavior' },
   ];
 
-  const resumePath = "/resume.pdf";
+  const resumePath = '/resume.pdf';
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-950">

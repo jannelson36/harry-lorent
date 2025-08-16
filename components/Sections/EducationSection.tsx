@@ -109,10 +109,10 @@ const EducationSection = () => {
         >
           <h3 className="text-2xl font-bold mb-6 text-center">Professional Ambitions</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { title: "Research Excellence", description: "Excel in research and develop innovative practices for knowledge sharing" },
-              { title: "Economic Impact", description: "Contribute to elevating the local and global economy through dedicated work" },
-              { title: "Continuous Growth", description: "Continually improve skills for competitiveness in the job market" },
+                        {[
+              { title: 'Research Excellence', description: 'Excel in research and develop innovative practices for knowledge sharing' },
+              { title: 'Economic Impact', description: 'Contribute to elevating the local and global economy through dedicated work' },
+              { title: 'Continuous Growth', description: 'Continually improve skills for competitiveness in the job market' },
             ].map((ambition, index) => (
               <motion.div
                 key={ambition.title}

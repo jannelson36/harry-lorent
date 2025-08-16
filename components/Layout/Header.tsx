@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Mail, Phone, MapPin, User, Moon, Sun } from 'lucide-react';
+import { Menu, X, Mail, Phone, MapPin, Moon, Sun } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio-data';
 
 interface HeaderProps {
