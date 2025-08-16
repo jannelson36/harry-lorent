@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: 'Harry Rajula Lorent - Portfolio',
@@ -22,6 +24,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
