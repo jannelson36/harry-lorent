@@ -49,3 +49,27 @@ export interface Certification {
   date?: string;
   credentialId?: string;
 }
+
+export interface Project {
+  id: string;
+  title: string;
+  organization?: string;
+  summary: string;
+  impact?: string;
+  metrics?: { label: string; value: string }[];
+  tags: string[];
+  period?: string;
+  link?: string;
+}
+
+export interface Testimonial {
+  name: string;
+  role: string;
+  company: string;
+  quote: string;
+}
+
+export interface SocialLink {
+  label: 'Email' | 'Phone' | 'LinkedIn' | 'GitHub' | 'Website';
+  href: string;
+}

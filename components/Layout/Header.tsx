@@ -16,9 +16,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
 
   const navItems = [
     { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
     { href: '#experience', label: 'Experience' },
+    { href: '#projects', label: 'Projects' },
     { href: '#skills', label: 'Skills' },
     { href: '#education', label: 'Education' },
+    { href: '#testimonials', label: 'Testimonials' },
     { href: '#contact', label: 'Contact' },
   ];
 
