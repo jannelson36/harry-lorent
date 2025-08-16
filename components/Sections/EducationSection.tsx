@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from 'lucide-react';
 import { education, certifications } from '@/data/portfolio-data';
 
 const EducationSection = () => {
