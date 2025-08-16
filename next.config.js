@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
-    unoptimized: true
+    unoptimized: Boolean(basePath),
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/harry-lorent' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/harry-lorent' : '',
+  assetPrefix: basePath || '',
+  basePath,
   eslint: {
     ignoreDuringBuilds: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
