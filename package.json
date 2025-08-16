@@ -1,0 +1,43 @@
+{
+  "name": "harry-lorent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A personal portfolio website for Harry Lorent.",
+  "main": "app/page.tsx",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "export": "next build && next export",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.263.1",
+    "@types/node": "24.2.1",
+    "react-intersection-observer": "^9.5.2",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "eslint": "latest",
+    "tailwindcss": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "react",
+    "tailwindcss"
+  ],
+  "author": "Harry Lorent",
+  "license": "MIT"
+}
+
