@@ -23,7 +23,7 @@ const ContactSection = () => {
     { name: 'Psychology Research', emoji: '🧠', description: 'Understanding human behavior' },
   ];
 
-  const resumePath = '/resume.pdf';
+  const resumePath = '/resume';
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-950">
