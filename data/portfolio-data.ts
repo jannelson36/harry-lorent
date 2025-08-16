@@ -1,4 +1,4 @@
-import { PersonalInfo, Experience, Education, Skill, Reference, Certification } from '@/types/portfolio';
+import { PersonalInfo, Experience, Education, Skill, Reference, Certification, Project, Testimonial, SocialLink } from '@/types/portfolio';
 
 export const personalInfo: PersonalInfo = {
   name: "Harry Rajula Lorent",
@@ -192,4 +192,76 @@ export const references: Reference[] = [
     contact: "0740 120 772",
     relationship: "HR Representative"
   }
+];
+
+export const projects: Project[] = [
+  {
+    id: 'kpi-dashboard',
+    title: 'Customer Experience KPI Insights Dashboard',
+    organization: 'Teleperformance Kenya',
+    summary: 'Designed and maintained an Excel/Tableau dashboard tracking CSAT, AHT, QA, and escalation rate to drive daily decision-making.',
+    impact: 'Enabled data-driven performance conversations and weekly coaching plans.',
+    metrics: [
+      { label: 'CSAT', value: '+8% YoY' },
+      { label: 'Escalations', value: '-15%' },
+      { label: 'AHT', value: '-9%' }
+    ],
+    tags: ['Excel', 'Tableau', 'KPI Tracking', 'Data Analysis'],
+    period: '2024',
+  },
+  {
+    id: 'qa-framework',
+    title: 'Quality Assurance & Escalation Framework',
+    organization: 'Teleperformance Kenya',
+    summary: 'Established a QA rubric and escalation SOPs, introduced calibration sessions, and built a feedback loop with SMEs.',
+    impact: 'Improved first-contact resolution and reduced repeat contacts while standardizing evaluations.',
+    metrics: [
+      { label: 'FCR', value: '+6%' },
+      { label: 'Recontacts', value: '-11%' }
+    ],
+    tags: ['Quality Assurance', 'SOPs', 'Coaching', 'Operations'],
+    period: '2024',
+  },
+  {
+    id: 'onboarding-program',
+    title: 'New Hire Onboarding & Training Program',
+    organization: 'Majorel Kenya EPZ',
+    summary: 'Built a multi-week ramp plan with product simulations, knowledge checks, and shadowing.',
+    impact: 'Faster ramp-up to KPI readiness and improved knowledge retention.',
+    metrics: [
+      { label: 'Ramp Time', value: '-20%' },
+      { label: 'New Hire QA', value: '+12 pts' }
+    ],
+    tags: ['Training', 'L&D', 'Curriculum', 'Enablement'],
+    period: '2023',
+  }
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    name: 'Beatrice Dimbia',
+    role: 'Manager',
+    company: 'Sifabe Enterprises',
+    quote: 'Harry is a dependable professional with strong ownership and an eye for process quality.'
+  },
+  {
+    name: 'Christian Herem',
+    role: 'Business Development Supervisor',
+    company: 'Kenya Power Lighting Company',
+    quote: 'He communicates clearly, learns fast, and consistently delivers on commitments.'
+  },
+  {
+    name: 'Erick Okumu',
+    role: 'HR Manager',
+    company: 'Mijesh Enterprises Ltd',
+    quote: 'Harry brings positivity and structure to teams, raising the bar for service excellence.'
+  }
+];
+
+export const socialLinks: SocialLink[] = [
+  { label: 'Email', href: 'mailto:rajulaharry@gmail.com' },
+  { label: 'Phone', href: 'tel:+254799946097' },
+  { label: 'LinkedIn', href: '#' },
+  { label: 'GitHub', href: '#' },
+  { label: 'Website', href: '#' }
 ];
