@@ -20,16 +20,18 @@
     "lucide-react": "^0.263.1",
     "@types/node": "24.2.1",
     "react-intersection-observer": "^9.5.2",
-    "@types/react": "19.1.10",
+    "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
-    "eslint": "latest",
+    "eslint": "^8.57.0",
     "tailwindcss": "latest",
     "eslint-config-next": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@typescript-eslint/eslint-plugin": "latest"
   },
   "keywords": [
     "portfolio",

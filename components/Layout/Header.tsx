@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Mail, Phone, MapPin, User } from 'lucide-react';
+import { Menu, X, Mail, Phone, MapPin, User, Moon, Sun } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio-data';
 
 interface HeaderProps {
@@ -12,6 +12,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   const navItems = [
     { href: '#home', label: 'Home' },
@@ -30,6 +31,15 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [isDark]);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -43,11 +53,11 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
-            : 'bg-white/90 backdrop-blur-sm'
-        }`}
+            ? 'bg-white/95 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
+            : 'bg-white/90 dark:bg-gray-900/80 backdrop-blur-sm'
+        } fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -65,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex items-center space-x-4">
               {navItems.map((item) => (
                 <motion.button
                   key={item.href}
@@ -75,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                   className={`relative px-3 py-2 text-sm font-medium transition-colors ${
                     activeSection === item.href.substring(1)
                       ? 'text-primary-600'
-                      : 'text-gray-700 hover:text-primary-600'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-primary-600'
                   }`}
                 >
                   {item.label}
@@ -87,16 +97,32 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                   )}
                 </motion.button>
               ))}
+              <button
+                onClick={() => setIsDark((v) => !v)}
+                className="ml-2 p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-primary-600"
+                aria-label="Toggle theme"
+              >
+                {isDark ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
             </nav>
 
             {/* Mobile Menu Button */}
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-primary-600"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
+            <div className="md:hidden flex items-center space-x-2">
+              <button
+                onClick={() => setIsDark((v) => !v)}
+                className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-primary-600"
+                aria-label="Toggle theme"
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 text-gray-700 dark:text-gray-300 hover:text-primary-600"
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.button>
+            </div>
           </div>
         </div>
 
@@ -107,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
             opacity: isMenuOpen ? 1 : 0,
             height: isMenuOpen ? 'auto' : 0,
           }}
-          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t"
+          className="md:hidden overflow-hidden bg-white/95 dark:bg-gray-900/90 backdrop-blur-md border-t"
         >
           <div className="px-4 py-2 space-y-1">
             {navItems.map((item) => (
@@ -117,8 +143,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 whileTap={{ scale: 0.95 }}
                 className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   activeSection === item.href.substring(1)
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-primary-600 bg-primary-50 dark:bg-gray-800'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 hover:bg-gray-50 dark:hover:bg-gray-800'
                 }`}
               >
                 {item.label}
@@ -129,7 +155,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       </motion.header>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50 pt-20">
+      <section id="home" className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <motion.div
@@ -156,7 +182,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto"
+              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               {personalInfo.title}
             </motion.p>
@@ -167,19 +193,19 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               transition={{ delay: 0.5 }}
               className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-12"
             >
-              <div className="flex items-center space-x-2 text-gray-600">
+              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                 <Mail size={20} className="text-primary-500" />
                 <a href={`mailto:${personalInfo.email}`} className="hover:text-primary-600 transition-colors">
                   {personalInfo.email}
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
+              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                 <Phone size={20} className="text-primary-500" />
                 <a href={`tel:${personalInfo.phone}`} className="hover:text-primary-600 transition-colors">
                   {personalInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
+              <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                 <MapPin size={20} className="text-primary-500" />
                 <span>{personalInfo.address}</span>
               </div>
@@ -191,9 +217,9 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               transition={{ delay: 0.6 }}
               className="space-y-4"
             >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto shadow-lg border">
-                <h3 className="text-lg font-semibold mb-4 text-gray-800">Professional Objective</h3>
-                <p className="text-gray-600 leading-relaxed text-justify">
+              <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto shadow-lg border">
+                <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">Professional Objective</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-justify">
                   A dynamic entrepreneur leveraging creativity, leadership, observation, and teamwork to design
                   and execute solutions that create exceptional customer value. An effective communicator skilled
                   in crafting marketing materials that resonate with clients and end-users. Committed to achieving

@@ -15,9 +15,7 @@ const ExperienceSection = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -26,10 +24,7 @@ const ExperienceSection = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
+      transition: { duration: 0.6, ease: 'easeOut' },
     },
   };
 
@@ -51,20 +46,20 @@ const ExperienceSection = () => {
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'full-time':
-        return 'bg-green-100 text-green-800 border-green-200';
+        return 'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800';
       case 'internship':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800';
       case 'contract':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
+        return 'bg-purple-100 text-purple-800 border-purple-200 dark:bg-purple-900/30 dark:text-purple-300 dark:border-purple-800';
       case 'volunteer':
-        return 'bg-orange-100 text-orange-800 border-orange-200';
+        return 'bg-orange-100 text-orange-800 border-orange-200 dark:bg-orange-900/30 dark:text-orange-300 dark:border-orange-800';
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return 'bg-gray-100 text-gray-800 border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700';
     }
   };
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,7 +67,7 @@ const ExperienceSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Professional <span className="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Experience</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full" />
@@ -98,7 +93,7 @@ const ExperienceSection = () => {
             >
               {/* Timeline dot */}
               <div
-                className={`absolute w-6 h-6 bg-white border-4 border-primary-500 rounded-full shadow-lg ${
+                className={`absolute w-6 h-6 bg-white dark:bg-gray-900 border-4 border-primary-500 rounded-full shadow-lg ${
                   index % 2 === 0
                     ? 'left-5 md:right-0 md:left-auto transform md:translate-x-1/2'
                     : 'left-5 md:left-0 transform md:-translate-x-1/2'
@@ -106,7 +101,7 @@ const ExperienceSection = () => {
               />
 
               <div className="ml-16 md:ml-0">
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
@@ -115,13 +110,13 @@ const ExperienceSection = () => {
                           {exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">
                         {exp.title}
                       </h3>
                       <p className="text-lg text-primary-600 font-semibold mb-2">
                         {exp.company}
                       </p>
-                      <div className="flex items-center text-gray-500 text-sm">
+                      <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
                         <Calendar size={16} className="mr-2" />
                         {exp.duration}
                       </div>
@@ -134,7 +129,7 @@ const ExperienceSection = () => {
                         {exp.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full"
+                            className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-xs font-medium rounded-full"
                           >
                             {tech}
                           </span>
@@ -150,7 +145,7 @@ const ExperienceSection = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: achievementIndex * 0.1 }}
-                        className="flex items-start text-gray-700"
+                        className="flex items-start text-gray-700 dark:text-gray-300"
                       >
                         <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                         <span className="text-sm leading-relaxed">{achievement}</span>
