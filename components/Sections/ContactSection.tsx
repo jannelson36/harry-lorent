@@ -18,12 +18,12 @@ const ContactSection = () => {
   ];
 
   const hobbies = [
-    { name: "Traveling", emoji: "🌍", description: "Exploring new cultures and places" },
-    { name: "Swimming", emoji: "🏊‍♂️", description: "Staying active and healthy" },
-    { name: "Psychology Research", emoji: "🧠", description: "Understanding human behavior" },
+    { name: 'Traveling', emoji: '🌍', description: 'Exploring new cultures and places' },
+    { name: 'Swimming', emoji: '🏊‍♂️', description: 'Staying active and healthy' },
+    { name: 'Psychology Research', emoji: '🧠', description: 'Understanding human behavior' },
   ];
 
-  const resumePath = "/resume.pdf";
+  const resumePath = '/resume';
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-950">
@@ -41,6 +41,41 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <motion.form
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const formData = new FormData(form);
+              const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  name: formData.get('name'),
+                  email: formData.get('email'),
+                  message: formData.get('message'),
+                })
+              });
+              if (res.ok) {
+                form.reset();
+                alert('Message sent!');
+              } else {
+                alert('Failed to send message');
+              }
+            }}
+            className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 order-last lg:order-first"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Send a Message</h3>
+            <div className="grid grid-cols-1 gap-4">
+              <input name="name" required placeholder="Your Name" className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 py-3 outline-none focus:ring-2 focus:ring-primary-500" />
+              <input name="email" type="email" required placeholder="Your Email" className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 py-3 outline-none focus:ring-2 focus:ring-primary-500" />
+              <textarea name="message" required placeholder="Your Message" rows={5} className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 py-3 outline-none focus:ring-2 focus:ring-primary-500" />
+              <button type="submit" className="mt-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all">Send</button>
+            </div>
+          </motion.form>
           {/* Contact Information */}
           <motion.div
             ref={ref}
