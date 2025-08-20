@@ -1,1 +1,0 @@
-// useScrollDirection hook placeholder

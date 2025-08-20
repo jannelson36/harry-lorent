@@ -1,1 +1,0 @@
-// useIntersection hook placeholder

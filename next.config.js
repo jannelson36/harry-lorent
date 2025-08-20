@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  trailingSlash: false,
-  images: {
-    unoptimized: false,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+const isGithubPages = process.env.GITHUB_ACTIONS === 'true' || process.env.GITHUB_PAGES === 'true'
 
-module.exports = nextConfig;
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  ...(isGithubPages ? {
+    images: {
+      unoptimized: true,
+    },
+    output: 'export',
+    trailingSlash: true,
+    basePath: '/harry-lorent',
+    assetPrefix: '/harry-lorent/',
+  } : {})
+}
+
+module.exports = nextConfig

@@ -1,64 +1,78 @@
-# Harry Lorent's Portfolio
+# Harry Lorent Portfolio
 
-This project is a personal portfolio built using Next.js and TypeScript. It showcases my skills, experience, education, and contact information.
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-## Project Structure
+## Features
 
-- **app/**: Contains the main application files.
-  - **layout.tsx**: Defines the layout component for the application.
-  - **page.tsx**: Serves as the main page component.
-  - **globals.css**: Contains global CSS styles.
+- 🚀 Built with Next.js 14 and TypeScript
+- 🎨 Styled with Tailwind CSS
+- 📱 Fully responsive design
+- ⚡ Optimized for performance
+- 🎭 Smooth animations and interactions
+- 🌟 Modern design with glassmorphism effects
 
-- **components/**: Contains reusable components.
-  - **Layout/**: Includes layout-related components.
-    - **Header.tsx**: The header component with navigation and branding.
-  - **Sections/**: Contains sections of the portfolio.
-    - **ExperienceSection.tsx**: Displays work experience.
-    - **SkillsSection.tsx**: Showcases skills.
-    - **EducationSection.tsx**: Presents educational background.
-    - **ContactSection.tsx**: Provides contact information.
-  - **ui/**: Contains UI components.
-    - **ScrollProgress.tsx**: Tracks and displays scroll progress.
+## Getting Started
 
-- **data/**: Contains data related to the portfolio.
-  - **portfolio-data.ts**: Holds experience, skills, education, and contact information.
+### Prerequisites
 
-- **hooks/**: Contains custom hooks.
-  - **useActiveSection.ts**: Manages the active section state.
+- Node.js (version 18 or later)
+- npm or yarn
 
-- **types/**: Contains TypeScript types.
-  - **portfolio.ts**: Defines types related to portfolio data.
-
-- **public/**: Intended for static assets (images, CV PDF).
-
-## Setup Instructions
+### Installation
 
 1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
+```bash
+git clone https://github.com/yourusername/harry-lorent.git
+cd harry-lorent
+```
 
-2. Navigate to the project directory:
-   ```
-   cd harry-lorent
-   ```
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-3. Install dependencies:
-   ```
-   npm install
-   ```
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-4. Run the development server:
-   ```
-   npm run dev
-   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-5. Open your browser and go to `http://localhost:3000` to view the portfolio.
+### Building for Production
 
-## Usage
+```bash
+npm run build
+npm run start
+```
 
-Feel free to explore the code and customize it as needed. This portfolio can be used as a template for your own personal projects.
+### Static Export for GitHub Pages
+
+```bash
+npm run build
+npm run export
+```
+
+## Deployment
+
+This project uses GitHub Pages via GitHub Actions.
+
+- Source: GitHub Actions builds the site and deploys the `out/` artifact
+- Workflow: `.github/workflows/deploy.yml` (remove extra duplicates like `nextjs.yml` to avoid conflicts)
+- Ensure Pages is enabled: Settings → Pages → Build and deployment → GitHub Actions
+
+No need to keep a `docs/` folder for deployment. The workflow publishes Pages automatically.
+
+## Tech Stack
+
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: GitHub Pages / Vercel
 
 ## License
 
-This project is open-source and available under the MIT License.
+This project is open source and available under the [MIT License](LICENSE).

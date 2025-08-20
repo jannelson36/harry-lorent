@@ -1,48 +1,28 @@
 {
   "name": "harry-lorent",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "A personal portfolio website for Harry Lorent.",
-  "main": "app/page.tsx",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "export": "next build && next export",
-    "type-check": "tsc --noEmit"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "framer-motion": "^10.16.0",
-    "lucide-react": "^0.263.1",
-    "@types/node": "24.2.1",
-    "react-intersection-observer": "^9.5.2",
+    "@types/node": "20.8.0",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
-    "@vercel/analytics": "latest",
-    "@vercel/speed-insights": "latest",
-    "resend": "^3.4.0"
+    "next": "^14.2.31",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.2.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0",
-    "eslint": "^8.57.0",
-    "tailwindcss": "latest",
-    "eslint-config-next": "^14.0.0",
-    "typescript": "latest",
-    "@typescript-eslint/parser": "latest",
-    "@typescript-eslint/eslint-plugin": "latest"
-  },
-  "keywords": [
-    "portfolio",
-    "nextjs",
-    "react",
-    "tailwindcss"
-  ],
-  "author": "Harry Lorent",
-  "license": "MIT"
+    "autoprefixer": "10.4.16",
+    "eslint": "8.51.0",
+    "eslint-config-next": "14.0.0",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.5"
+  }
 }
-
