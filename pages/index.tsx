@@ -158,7 +158,7 @@ const Portfolio = () => {
         <title>Harry Lorent - Operations & Customer Experience Leader</title>
         <meta name="description" content="Versatile professional with proven expertise in customer service, communications, public relations, and operations leadership." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={`${basePath}/favicon.svg`} type="image/svg+xml" />
+        <link rel="icon" href={`${basePath}/IMG_7163.jpeg`} type="image/jpeg+xml" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-600 to-blue-700 text-gray-800">
