@@ -290,9 +290,7 @@ const Portfolio = () => {
                 </p>
                 
                 <p>
-                  Currently pursuing a Bachelor of Mass Communications at Africa Nazarene University, I combine 
-                  academic knowledge with practical experience to stay at the forefront of industry best 
-                  practices and emerging trends.
+                  🎓 I hold a Bachelor’s degree in Marketing from Daystar University. I bring together academic knowledge and practical experience to stay ahead of industry best practices and emerging trends.
                 </p>
               </div>
             </div>
