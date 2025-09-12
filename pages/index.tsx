@@ -270,7 +270,7 @@ const Portfolio = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div className="text-center">
                 <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl sm:text-5xl md:text-6xl font-bold shadow-2xl hover:scale-105 transition-transform duration-300">
-                  DO
+                  HL
                 </div>
               </div>
               
@@ -399,8 +399,8 @@ const Portfolio = () => {
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
                 <div className="text-3xl mb-4">📱</div>
                 <h4 className="text-lg font-semibold mb-2">Phone</h4>
-                <a href="tel:+254794125410" className="text-blue-200 hover:text-white transition-colors">
-                  +254 794 125 410
+                <a href="tel:+254799946097" className="text-blue-200 hover:text-white transition-colors">
+                  +254 799 946 097
                 </a>
               </div>
               
