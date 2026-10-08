@@ -7,55 +7,55 @@ const LINKEDIN = 'https://www.linkedin.com/in/harry-lorent-8962a320a/';
 
 const chapters = [
   {
-    year: '2019',
+    year: '2020',
     kicker: 'Chapter One',
-    title: 'Learning to tell the story',
-    role: 'Administrative & PR Assistant',
-    company: 'CLYKAY Ultimate Water Experts',
-    date: 'Oct 2019 – Jun 2021',
+    title: 'Building a foundation in business',
+    role: 'Business Development Consultant · Intern',
+    company: 'Kenya Power',
+    date: 'May 2020 – Aug 2021',
     story:
-      'Fresh from a Marketing degree at Daystar University, I learned that every brand is a story waiting to be told well. I wrote the press releases, ran the social channels and stood behind product launches — learning how a single message can shape how people feel.',
-    wins: ['Integrated PR & marketing strategy', 'Press releases, pitches & newsletters', 'Social campaigns & launch events'],
-  },
-  {
-    year: '2021',
-    kicker: 'Chapter Two',
-    title: 'Becoming the voice on the line',
-    role: 'Customer Service Representative',
-    company: 'Majorel Kenya',
-    date: 'Jun 2021 – Aug 2022',
-    story:
-      'Then I moved to the front line. Phone, email, chat — billing questions, broken products, frustrated people. I discovered that customer experience is storytelling in real time: every conversation either earns trust or loses it.',
-    wins: ['Multichannel support', 'Orders, returns & billing resolution', 'Clean CRM records for follow-through'],
+      'My early experience at Kenya Power introduced me to business development and gave me a practical foundation for working with customers and organizations.',
+    wins: ['Business development', 'Product marketing', 'Customer service management'],
   },
   {
     year: '2022',
-    kicker: 'Chapter Three',
-    title: 'From one voice to a whole team',
-    role: 'Operations Supervisor',
-    company: 'Teleperformance Kenya',
-    date: 'Sep 2022 – Oct 2024',
+    kicker: 'Chapter Two',
+    title: 'Developing an eye for detail',
+    role: 'Internal Auditor',
+    company: 'Mijesh Construction LTD Company',
+    date: 'Feb 2022 – Nov 2023',
     story:
-      'Leadership came next. I onboarded and coached agents, watched the metrics that matter and owned client relationships. My job shifted from solving problems to building people who solve them.',
-    wins: ['Team supervision & daily coaching', 'Onboarding & training programs', 'QA, performance metrics & client reporting'],
+      'Internal audit strengthened my attention to detail and analytical approach—skills I continue to bring to customer-facing and executive support work.',
+    wins: ['Internal audits', 'Data analysis', 'Problem solving'],
   },
   {
-    year: '2024',
-    kicker: 'Chapter Four',
-    title: 'Guarding the reputation',
-    role: 'Reviews Management Specialist',
-    company: 'TalentPop',
-    date: 'Oct 2024 – Present',
+    year: '2023',
+    kicker: 'Chapter Three',
+    title: 'Putting customers first',
+    role: 'Customer Service Specialist',
+    company: 'Teleperformance',
+    date: 'Nov 2023 – Jul 2026',
     story:
-      'Today I bring it all together — PR instincts, frontline empathy and operational discipline — to protect brands where customers speak loudest: their reviews. I respond, flag fraud, spot patterns and turn feedback into strategy.',
-    wins: ['Google review analysis & response', 'Fraud & compliance screening', 'Feedback trends reported to leadership'],
+      'At Teleperformance, I supported customers and built the service mindset I now bring to proactive executive support: listening carefully, following through, and anticipating what people need.',
+    wins: ['Customer service', 'Customer education', 'Customer-first communication'],
+  },
+  {
+    year: '2026',
+    kicker: 'Chapter Four',
+    title: 'Making the shift from response to foresight',
+    role: 'Executive Assistant',
+    company: 'Athena',
+    date: 'Sep 2026 – Present',
+    story:
+      'I’m excited to support executives with the dedication, precision, and client-first mindset developed in customer service. I’ve moved from solving problems in the moment to managing priorities, anticipating needs, and creating the structure that lets leaders focus on what matters.',
+    wins: ['Executive administrative assistance', 'Virtual assistance', 'Market research'],
   },
 ];
 
 const toolkit = [
-  'Team Leadership', 'Operations', 'Customer Success', 'Quality Assurance', 'Public Relations',
-  'Content & Social', 'Data & Reporting', 'Zendesk', 'Salesforce', 'Gorgias', 'Shopify',
-  'Review Tracker', 'BBB', 'Asana', 'Slack', 'Loom', 'HubStaff', 'Beehiiv', 'MS Office',
+  'Executive Administrative Assistance', 'Virtual Assistance', 'Customer Service',
+  'Market Research', 'Search Engine Optimization (SEO)', 'Product Marketing',
+  'Customer Education', 'Data Analysis', 'Problem Solving',
 ];
 
 const Portfolio = () => {
@@ -73,10 +73,10 @@ const Portfolio = () => {
   return (
     <>
       <Head>
-        <title>Harry Lorent — Customer Experience & Operations Leader</title>
-        <meta name="description" content="The story of Harry Lorent: from PR storyteller to customer experience and operations leader, based in Nairobi, Kenya." />
+        <title>Harry Lorent — Executive Assistant</title>
+        <meta name="description" content="Harry Lorent is an Executive Assistant at Athena in Nairobi, Kenya, bringing a customer-first mindset and experience in customer service, business development, and internal audit." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Harry Lorent — Customer Experience & Operations Leader" />
+        <meta property="og:title" content="Harry Lorent — Executive Assistant" />
         <meta property="og:image" content={`${basePath}/IMG_7163.jpeg`} />
         <meta name="theme-color" content="#0c0a09" />
         <link rel="icon" href={`${basePath}/favicon.svg`} type="image/svg+xml" />
@@ -100,11 +100,11 @@ const Portfolio = () => {
             <div className="reveal">
               <p className="uppercase tracking-[0.3em] text-xs text-amber-300 mb-6">Prologue · Nairobi, Kenya</p>
               <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-white">
-                Every customer has a story. <span className="italic text-amber-300">I make sure it ends well.</span>
+                Great support is proactive. <span className="italic text-amber-300">I help make it happen.</span>
               </h1>
               <p className="mt-8 text-lg text-stone-400 max-w-xl">
-                I&apos;m Harry — a customer experience and operations leader who started out in public relations.
-                This is how a storyteller became the person brands trust with their reputation.
+                I&apos;m Harry, an Executive Assistant at Athena. I bring a client-first approach shaped by
+                customer service, business development, and internal audit experience.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a href="#story" className="rounded-full bg-amber-300 text-stone-900 px-7 py-3 font-semibold hover:bg-amber-200 transition">Read the story ↓</a>
@@ -139,8 +139,10 @@ const Portfolio = () => {
 
           {/* The toolkit */}
           <div className="reveal py-16 border-t border-white/10">
-            <p className="uppercase tracking-[0.3em] text-xs text-amber-300">Along the way</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-white mt-3">The toolkit I picked up</h2>
+            <p className="uppercase tracking-[0.3em] text-xs text-amber-300">The foundation</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-white mt-3">Education & skills</h2>
+            <p className="mt-4 text-stone-400">Bachelor of Commerce (BCom), Marketing · Daystar University · 2017–2021</p>
+            <p className="mt-3 text-stone-400">Problem Solving · 100th percentile, TestGorilla · May 2026</p>
             <div className="mt-8 flex flex-wrap gap-2">
               {toolkit.map((t) => (
                 <span key={t} className="rounded-full border border-white/10 px-4 py-1.5 text-sm hover:border-amber-300 hover:text-amber-300 transition">{t}</span>
@@ -153,8 +155,8 @@ const Portfolio = () => {
         <section id="contact" className="border-t border-white/10">
           <div className="reveal mx-auto max-w-3xl px-6 py-28 text-center">
             <p className="uppercase tracking-[0.3em] text-xs text-amber-300">Epilogue</p>
-            <h2 className="font-serif text-4xl md:text-6xl text-white mt-4">The next chapter could be yours.</h2>
-            <p className="mt-6 text-lg text-stone-400">Looking for someone to lead your CX team, protect your reputation or build a support operation that customers love? Let&apos;s talk.</p>
+            <h2 className="font-serif text-4xl md:text-6xl text-white mt-4">Let&apos;s make work run smoothly.</h2>
+            <p className="mt-6 text-lg text-stone-400">For executive assistance, virtual support, market research, or customer service, let&apos;s connect.</p>
             <a href="mailto:harrylorent@gmail.com" className="inline-block mt-10 rounded-full bg-amber-300 text-stone-900 px-8 py-4 font-semibold hover:bg-amber-200 transition">harrylorent@gmail.com</a>
             <div className="mt-8 flex justify-center gap-6 text-sm text-stone-400">
               <a href="tel:+254799946097" className="hover:text-amber-300">+254 799 946 097</a>
